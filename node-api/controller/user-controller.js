@@ -1,4 +1,4 @@
-// const  pool = require("../db/db.js")
+
 import  pool  from "../db/db.js";
 export const postCreateUser = (req,res)=>{
     const { name, email} = req.body;

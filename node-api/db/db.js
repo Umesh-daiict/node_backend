@@ -1,10 +1,12 @@
-// const {Pool}  =  require("pg")
+import dotenv from "dotenv";
+
+dotenv.config({ debug: true, path:`.env.${process.env.NODE_ENV}`});
 import pkg from "pg";
 const Pool = pkg.Pool;
-// todo save secret
 export default new Pool({
-  user: "postgres",
-  host: "localhost",
-  port: 5432,
-  database: "users",
+  user: process.env.db_user,
+  host: process.env.db_host,
+  port: process.env.db_port,
+  database: process.env.db_database,
+  password: process.env.db_password,
 });

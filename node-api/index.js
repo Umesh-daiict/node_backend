@@ -1,9 +1,10 @@
-// const express  = require("express");
-// const bodyParser = require("body-parser");
-// const { postCreateUser } = require("./controller/user-controller");
+// import dotenv from "dotenv";
+// dotenv.config({ debug: true, path:'./.env'});
+
 import express from "express";
 import bodyParser from "body-parser";
 import { allUsers, postCreateUser } from "./controller/user-controller.js";
+console.log("host:",process.env.db_database)
 
 const app = express()
 
